@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { ReactTyped } from "react-typed";
-
+import download from"../src/image/download.jpg";
 
 function App() {
   const [toggle, setToggle] = useState(false);
@@ -66,17 +66,41 @@ function App() {
                    loop={true} 
                    backSpeed={50}/>
                 </div>
+                <button className="bg-black text-white p-3 rounded ">Get Start </button>
+
               </div>
 
             </div>
 
             {/* eneded */}
 
-            <div className="max-w-[1240] mx-auto h-[200px] border border-black grid grid-cols-3"> 
-            <div className="border border-black h-[200]"></div>
-            <div className="border border-black h-[200]"></div>
-            <div className="border border-black h-[200]"></div>
+            <div className="max-w-[1240px] my-10px mx-auto  md:grid grid-cols-2"> 
+            <div className="cols-span-1  md:w-[80%] m-4 text-center">
+              <img src={download} alt="#" className="inline w-full " />
             </div>
+            <div className=" cols-span-1  flex flex-col justify-center">
+              <h1 className="font-bold text-green-500 my-2">Learn here</h1>
+              <p className="m-3 text-justify">Each university determines admission and the number 
+                of pre-approved prior learning credits that may count
+                 toward the degree requirements according to institutional policies, 
+                which may consider any existing credits you may have.
+        
+              </p>
+              <button className="bg-black w-[30%]   text-white p-3 rounded ">Get Start </button>
+            </div>
+           
+            </div>
+{/*    */}
+
+<div className="bg-[#2699fb] p-4">
+  <div className=" max-w-[1240px] mx-auto flex justify-between ">
+    <div className="border border-black h-[300px]">hello </div>
+    <div className="border border-black h-[300px]">hello </div>
+
+  </div>
+
+</div>
+
 
 
 
