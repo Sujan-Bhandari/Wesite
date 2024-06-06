@@ -66,7 +66,7 @@ function App() {
                    loop={true} 
                    backSpeed={50}/>
                 </div>
-                <button className="bg-black text-white p-3 rounded ">Get Start </button>
+                <button className="bg-black text-white mt-5 p-3 rounded ">Get Start </button>
 
               </div>
 
@@ -86,20 +86,53 @@ function App() {
                 which may consider any existing credits you may have.
         
               </p>
-              <button className="bg-black w-[30%]   text-white p-3 rounded ">Get Start </button>
+              <button className="bg-black w-[30%] mx-auto  text-white p-3 rounded ">Get Start </button>
             </div>
            
             </div>
 {/*    */}
 
 <div className="bg-[#2699fb] p-4">
-  <div className=" max-w-[1240px] mx-auto flex justify-between ">
-    <div className="border border-black h-[300px]">hello </div>
-    <div className="border border-black h-[300px]">hello </div>
+  <div className=" max-w-[1240px] mx-auto md:flex justify-between py-[50px] ">
+    <div className="m-2">
+    <h1 className="text-white text-2xl md:text-[40px] p-3 font-bold ">Want to learn latest I.T skills?</h1>
+    <p className="text-white">Sign up  and stay up to date.</p>
+     </div>
+
+    <div className="m-2">
+      <input type="text" className="p-3   rounded mb-2 mr-2 text-slate-700" placeholder='Email'/>
+      <button className="bg-[black] text-white rounded   p-3">Notify Me</button>
+      <br/>
+      <p className="text-white m-2">
+        We care about the protection of your data. Read our <br/>
+      <p className="text-black"> Privacy Policy</p>
+      </p>
+       </div>
 
   </div>
 
 </div>
+
+
+
+{/* plam */}
+<div className="py-[100px] px-2 ">
+  <div className=" max-w-[1240px] mx-auto md:grid grid-cols-3 gap-5">
+
+    <div className="shadow-xl  h-[500px]  bg-gray-50 hover:scale-110 duration-500">first</div>
+    <div className="shadow-xl  h-[500px] bg-gray-300 hover:scale-110 duration-500">second</div>
+    <div className="shadow-xl  h-[500px]  bg-gray-50  hover:scale-110 duration-500">Third</div>
+
+
+  </div>
+</div>
+
+ {/* footer
+<div className=" mx-auto flex justify-between  ">
+  <div className="border border-black   " > 1</div>
+  <div  className="border border-black ">2</div>
+  <div className="border border-black "> 7</div>
+</div> */}
 
 
 
