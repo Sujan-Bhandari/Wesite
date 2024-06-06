@@ -127,12 +127,13 @@ function App() {
   </div>
 </div>
 
- {/* footer
-<div className=" mx-auto flex justify-between  ">
+ {/* footer */}
+ <hr className="bg-[black] h-0.5" />
+<div className=" p-10 mx-auto flex justify-between  ">
   <div className="border border-black   " > 1</div>
   <div  className="border border-black ">2</div>
   <div className="border border-black "> 7</div>
-</div> */}
+</div> 
 
 
 
