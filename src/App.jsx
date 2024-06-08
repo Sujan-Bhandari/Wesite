@@ -10,22 +10,48 @@ function App() {
   
   return (
     <>
-    <div className="bg-[green] p-6" >
+
+
+    
+<div className="bg-[green] p-6" >
+
+<div className="max-w-[1240px] py-[15px] item-center flex justify-between  mx-auto">
+  <div className="text-3xl font-bold  text-yellow-300">
+    Info
+    <span className="text-black">dev</span> 
+  </div>
+  {
+    toggle ?
+    <AiOutlineClose onClick={()=>setToggle(!toggle)}  className="text-white text-5xl md:hidden block"/>
+    :
+    <AiOutlineMenu onClick={()=>setToggle(!toggle)} className="text-white text-5xl md:hidden block" />
+
+  }
+ 
+ <input type="text" className="p-3   rounded mb-2 mr-2 text-slate-700" placeholder='What do you want to learn today?'/>
+
+  <ul className="flex  gap-5  text-center">
+    <li className="font-bold text-white bg-black rounded   p-3">login</li>
+    <li className="font-bold text-red-500 bg-white rounded   p-3">Sign up</li>
+
+  </ul>
+
+  
+
+  </div>  
+
+
+  </div>   
+
+
+
+    
+    <div className="bg-[#0a1c0a] p-6" >
 
     <div className="max-w-[1240px] py-[15px] item-center flex justify-between  mx-auto">
-      <div className="text-3xl font-bold  text-yellow-300">
-        Info
-        <span className="text-black">dev</span> 
-      </div>
-      {
-        toggle ?
-        <AiOutlineClose onClick={()=>setToggle(!toggle)}  className="text-white text-5xl md:hidden block"/>
-        :
-        <AiOutlineMenu onClick={()=>setToggle(!toggle)} className="text-white text-5xl md:hidden block" />
-
-      }
      
-      <ul className="hidden md:flex text-red-300 gap-8">
+     
+      <ul className="hidden md:flex  text-red-300 gap-8 text-center">
         <li>Home</li>
         <li>Company</li>
         <li>Resource</li>
@@ -33,6 +59,7 @@ function App() {
         <li>Contact</li>
       </ul>
 
+     
       {/*Responsive menu */}
       <ul
             className={`duration-300 md:hidden w-full h-screen text-white fixed bg-black top-[126px] ${
@@ -129,10 +156,13 @@ function App() {
 
  {/* footer */}
  <hr className="bg-[black] h-0.5" />
-<div className=" p-10 mx-auto flex justify-between  ">
-  <div className="border border-black   " > 1</div>
-  <div  className="border border-black ">2</div>
-  <div className="border border-black "> 7</div>
+
+
+<div className="max-w-[1240px] md:mx-auto  justify-between  grid grid-cols-4  py-10">
+  <div className="border border-black  h-[500px] " > 1</div>
+  <div  className="border border-black h-[500px]">2</div>
+  <div className="border border-black  h-[500px]"> 7</div>
+  <div  className="border border-black h-[500px]">2</div>
 </div> 
 
 
