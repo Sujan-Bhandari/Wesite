@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
-import download from "../src/image/download.jpg";
+import saral from "../src/image/saral.jpg";
 
 
 function App() {
@@ -153,7 +153,7 @@ function App() {
 
 {/* main photo */}
 <div className="photo">
-<img className="w-full h-[600px]" src={download} alt="" /> 
+<img className="md:w-full md:h-[600px] " src={saral} alt="" /> 
 </div>
 
     </>
