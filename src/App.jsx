@@ -1,172 +1,160 @@
 import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { AiOutlineClose } from "react-icons/ai";
-import { ReactTyped } from "react-typed";
-import download from"../src/image/download.jpg";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { CiSearch } from "react-icons/ci";
+import download from "../src/image/download.jpg";
+
 
 function App() {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
+  const [dropdowns, setDropdowns] = useState({
+    master: false,
+    bachelor: false,
+    intermediate: false,
+    diploma: false,
+  });
 
-  
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
+  const handleDropdown = (dropdown) => {
+    setDropdowns({
+      ...dropdowns,
+      [dropdown]: !dropdowns[dropdown],
+    });
+  };
+
   return (
     <>
+      {/* Section */}
+      <div className="flex items-center justify-between p-4 bg-gray-100 flex-wrap">
+        <div id="logo" className="text-3xl text-orange-500">
+          Info<span className="text-black">Dev</span>
+        </div>
 
+        <div className="flex items-center space-x-4 w-full md:w-auto mt-2 md:mt-0">
+          <div id="search" className="relative flex-grow md:flex-grow-0">
+            <input
+              type="text"
+              placeholder="Search here"
+              className="w-full px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            />
+            <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+              <CiSearch className="w-5 h-5 text-gray-400" />
+            </div>
+          </div>
 
-    
-<div className="bg-[green] p-6" >
-
-<div className="max-w-[1240px] py-[15px] item-center flex justify-between  mx-auto">
-  <div className="text-3xl font-bold  text-yellow-300">
-    Info
-    <span className="text-black">dev</span> 
-  </div>
-  {
-    toggle ?
-    <AiOutlineClose onClick={()=>setToggle(!toggle)}  className="text-white text-5xl md:hidden block"/>
-    :
-    <AiOutlineMenu onClick={()=>setToggle(!toggle)} className="text-white text-5xl md:hidden block" />
-
-  }
- 
- <input type="text" className="p-3   rounded mb-2 mr-2 text-slate-700" placeholder='What do you want to learn today?'/>
-
-  <ul className="flex  gap-5  text-center">
-    <li className="font-bold text-white bg-black rounded   p-3">login</li>
-    <li className="font-bold text-red-500 bg-white rounded   p-3">Sign up</li>
-
-  </ul>
-
-  
-
-  </div>  
-
-
-  </div>   
-
-
-
-    
-    <div className="bg-[#0a1c0a] p-6" >
-
-    <div className="max-w-[1240px] py-[15px] item-center flex justify-between  mx-auto">
-     
-     
-      <ul className="hidden md:flex  text-red-300 gap-8 text-center">
-        <li>Home</li>
-        <li>Company</li>
-        <li>Resource</li>
-        <li>AboutUs</li>
-        <li>Contact</li>
-      </ul>
-
-     
-      {/*Responsive menu */}
-      <ul
-            className={`duration-300 md:hidden w-full h-screen text-white fixed bg-black top-[126px] ${
-              toggle ? "left-0" : "left-[-100%]"
-            }`}
-          >        <li className="p-5">Home</li>
-        <li className="p-5">Company</li>
-        <li className="p-5">Resource</li>
-        <li className="p-5">AboutUs</li>
-        <li className="p-5">Contact</li>
-      </ul>
-
-      </div>  
-
-
-      </div>   
-
-      {/* banner part */}
-
-            <div className="bg-[#2699fb] w-full py-[100px] ">
-              <div className="max-w-[1240px] mx-auto text-center font-bold text-white  ">
-                <div className="text-xl md:text-4xl  md:mt-4 text-red-200 ">
-                  Learn with us.
-                </div>
-                <h2 className="  md:mt-4 font-bold text-5xl md:text-[70px]">Grow with us.</h2>
-                <div className="text-[20px] md:text-[50px] md:mt-4">
-                  Learn
-                  <ReactTyped className="pl-3"
-                   strings={["After +2", "Bachelors"]} 
-                   typeSpeed={120}
-                   loop={true} 
-                   backSpeed={50}/>
-                </div>
-                <button className="bg-black text-white mt-5 p-3 rounded ">Get Start </button>
-
+          {/* Dropdown */}
+          <div className="relative">
+            <button
+              onClick={handleToggle}
+              className="flex items-center px-3 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            >
+              Categories
+              {toggle ? <AiOutlineMenu className="ml-2" /> : <AiOutlineClose className="ml-2" />}
+            </button>
+            {!toggle && (
+              <div className="absolute right-0 w-48 mt-2 bg-white  rounded shadow-10">
+                <ul className="py-1">
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">University</li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Colleges</li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Entrance</li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Courses</li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Study Material</li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">News</li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Events</li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Ask & Answer</li>
+                </ul>
               </div>
+            )}
+          </div>
+        </div>
 
-            </div>
+        <div id="login" className="flex space-x-4 mt-2 md:mt-0">
+          <button className="px-4 py-2 text-sm text-white font-bold bg-orange-500 rounded-lg hover:bg-white hover:text-black">
+            Login
+          </button>
+          <button className="px-4 py-2 text-sm text-white font-bold bg-green-500 rounded-lg hover:bg-white hover:text-black">
+            Sign Up
+          </button>
+        </div>
+      </div>
+      {/* section */}
 
-            {/* eneded */}
+      {/* Navigation */}
 
-            <div className="max-w-[1240px] my-10px mx-auto  md:grid grid-cols-2"> 
-            <div className="cols-span-1  md:w-[80%] m-4 text-center">
-              <img src={download} alt="#" className="inline w-full " />
-            </div>
-            <div className=" cols-span-1  flex flex-col justify-center">
-              <h1 className="font-bold text-green-500 my-2">Learn here</h1>
-              <p className="m-3 text-justify">Each university determines admission and the number 
-                of pre-approved prior learning credits that may count
-                 toward the degree requirements according to institutional policies, 
-                which may consider any existing credits you may have.
-        
-              </p>
-              <button className="bg-black w-[30%] mx-auto  text-white p-3 rounded ">Get Start </button>
-            </div>
-           
-            </div>
-{/*    */}
 
-<div className="bg-[#2699fb] p-4">
-  <div className=" max-w-[1240px] mx-auto md:flex justify-between py-[50px] ">
-    <div className="m-2">
-    <h1 className="text-white text-2xl md:text-[40px] p-3 font-bold ">Want to learn latest I.T skills?</h1>
-    <p className="text-white">Sign up  and stay up to date.</p>
-     </div>
+      <nav id="navigation" className="text-white bg-orange-500 p-7 hidden md:block">
+        <ul className="mx-auto flex justify-center gap-20">
+          <li>
+            <button onClick={() => handleDropdown('master')}>Master Entrance</button>
+            {dropdowns.master && (
+              <div className="absolute right-0 w-48 mt-2 bg-white rounded shadow-10">
+                <ul className="py-1">
+                <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tribhuvan Universtiy </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pokhara University </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Far-Western University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lumbini Bouddha University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Nepal Open University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Purbanchal University   </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kathmandu University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Rajarshi Janak University   </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Agricultural & Forestry University   </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Mid Western University    </li>
 
-    <div className="m-2">
-      <input type="text" className="p-3   rounded mb-2 mr-2 text-slate-700" placeholder='Email'/>
-      <button className="bg-[black] text-white rounded   p-3">Notify Me</button>
-      <br/>
-      <p className="text-white m-2">
-        We care about the protection of your data. Read our <br/>
-      <p className="text-black"> Privacy Policy</p>
-      </p>
-       </div>
+                </ul>
+              </div>
+            )}
+          </li>
+          <li>
+            <button onClick={() => handleDropdown('bachelor')}>Bachelor Entrance</button>
+            {dropdowns.bachelor && (
+              <div className="absolute right-0 w-48 mt-2 bg-white rounded shadow-10">
+                <ul className="py-1">
+                <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Tribhuvan Universtiy </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Pokhara University </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Far-Western University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Lumbini Bouddha University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Nepal Open University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Purbanchal University   </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kathmandu University  </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> Rajarshi Janak University   </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Agricultural & Forestry University   </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> ICAN     </li>
+                  <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"> WestCliff University    </li>
+                </ul>
+              </div>
+            )}
+          </li>
+          <li>
+            <button onClick={() => handleDropdown('intermediate')}>Intermediate Entrance</button>
+            {dropdowns.intermediate && (
+              <div className="absolute right-0 w-48 mt-2 bg-white rounded shadow-10">
+                <ul className="py-1">
+                <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">NEB </li>
+                </ul>
+              </div>
+            )}
+          </li>
+          <li>
+            <button onClick={() => handleDropdown('diploma')}>Diploma Entrance</button>
+            {dropdowns.diploma && (
+              <div className="absolute right-0 w-48 mt-2 bg-white rounded shadow-10">
+                <ul className="py-1">
+                <li className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">CTEVT </li>
+                </ul>
+              </div>
+            )}
+          </li>
+        </ul>
+      </nav>
+{/* navgivation */}
 
-  </div>
 
+{/* main photo */}
+<div className="photo">
+<img className="w-full h-[600px]" src={download} alt="" /> 
 </div>
-
-
-
-{/* plam */}
-<div className="py-[100px] px-2 ">
-  <div className=" max-w-[1240px] mx-auto md:grid grid-cols-3 gap-5">
-
-    <div className="shadow-xl  h-[500px]  bg-gray-50 hover:scale-110 duration-500">first</div>
-    <div className="shadow-xl  h-[500px] bg-gray-300 hover:scale-110 duration-500">second</div>
-    <div className="shadow-xl  h-[500px]  bg-gray-50  hover:scale-110 duration-500">Third</div>
-
-
-  </div>
-</div>
-
- {/* footer */}
- <hr className="bg-[black] h-0.5" />
-
-
-<div className="max-w-[1240px] md:mx-auto  justify-between  grid grid-cols-4  py-10">
-  <div className="border border-black  h-[500px] " > 1</div>
-  <div  className="border border-black h-[500px]">2</div>
-  <div className="border border-black  h-[500px]"> 7</div>
-  <div  className="border border-black h-[500px]">2</div>
-</div> 
-
-
-
 
     </>
   );
