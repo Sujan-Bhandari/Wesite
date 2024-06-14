@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import saral from "../src/image/saral.jpg";
-
+import download from "../src/image/download.jpg";
+import images from "../src/image/images.jpg";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -155,6 +156,229 @@ function App() {
 <div className="photo">
 <img className="md:w-full md:h-[600px] " src={saral} alt="" /> 
 </div>
+
+{/* online class hover  */}
+<div className="py-24 px-2">
+  <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div className="shadow-xl h-full bg-gray-50 hover:scale-105 transition-transform duration-500 p-6 flex flex-col items-center">
+      <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
+      <h2 className="text-[#4095ba] font-bold text-xl text-center">Career Counseling</h2>
+      <p className="text-justify mt-4">
+        We conduct career counseling of different faculties online or through conducting counseling sessions in the different provisions of Nepal. We clear every doubt of students related to the professional career which they want to be in the future. Students will be clear about the advantages and disadvantages of every profession.
+      </p>
+    </div>
+
+    <div className="shadow-xl h-full bg-gray-50 hover:scale-105 transition-transform duration-500 p-6 flex flex-col items-center">
+      <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
+      <h2 className="text-[#4095ba] font-bold text-xl text-center">Refer and Earn</h2>
+      <p className="text-justify mt-4">
+        We provide a unique referral code to every user. Users can use this code and refer to their friends and family. We provide a point according to the number of refer and provide earning amount to them who refer to others and also for them who accept referral code of their friends. The more will be the referred person more will be his/her earning.
+      </p>
+    </div>
+
+    <div className="shadow-xl h-full bg-gray-50 hover:scale-105 transition-transform duration-500 p-6 flex flex-col items-center">
+      <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
+      <h2 className="text-[#4095ba] font-bold text-xl text-center">Ask Doubts</h2>
+      <p className="text-justify mt-4">
+        By observing the student's problems, we created the Forum to ask any kind of doubts and problems related to faculty subjects through text or photos and we have an expert to give appropriate answers. Not only questions, everyone can ask their confusion or doubts related to education, educational fields, schools, colleges, and universities as well.
+      </p>
+    </div>
+
+    <div className="shadow-xl h-full bg-gray-50 hover:scale-105 transition-transform duration-500 p-6 flex flex-col items-center">
+      <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
+      <h2 className="text-[#4095ba] font-bold text-xl text-center">Online Mock Test</h2>
+      <p className="text-justify mt-4">
+        Study and entertainment can be simultaneous. Prepare for the entrance exam by attending a mock test with questions from the Old Questions collection and Model Questions. Also, questions are bundled model-wise so that you can practice for entrance.
+      </p>
+    </div>
+  </div>
+</div>
+
+{/* Ended  */}
+
+{/* Entrance Exam  */}
+<div className="entranceexam text-indigo-200">
+  <div>
+    <h2 className="text-center p-5 mt-3 text-orange-500 font-bold text-2xl">
+      ENTRANCE <span className="text-[#4095ba]"> EXAM</span>
+    </h2>
+
+    <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5  ">
+
+
+      <div className="p-3  shadow-2xl font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">BCA </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">B.SC.CSIT</h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">BE CIVIL </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xlp-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">BSW </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">BBA </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div> 
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">BHM </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">MBBS </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">B.E.E </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">FORESTRY </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">BLLB </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">KUUMAT </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>
+
+      <div className=" shadow-2xl p-3 font-bold">
+        <img src={images} alt="" className="w-full h-40 object-cover" />
+        <h3 className="text-gray-500 p-1 m-1">Tribhuvan University</h3>
+        <h2 className="text-[#4095ba] p-1 m-1">CMAT </h2>
+        <div className="border border-black bg-orange-400 p-2 m-1 hover:bg-orange-100 transition-colors">
+          <p className="text-black text-center">Find out More</p>
+        </div>
+      </div>      
+{/* ENDED  */}
+
+    </div>
+  </div>
+</div>
+
+
+{/* PROVEN EFFICIENCY  */}
+<div>
+  <h2 className="text-center p-10 mt-10 text-orange-500 font-bold text-2xl">
+    PROVEN <span className="text-[#4095ba]">EFFICIENCY</span>
+  </h2>
+</div>
+<div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+  
+  <div className="shadow-xl h-full bg-white  p-6 flex ">
+    <img className="w-20 h-20 rounded-full mb-4" src={download} alt="Happy Students" />
+    <div className="ml-5">
+      <h2 className="font-bold text-2xl">+9,9193</h2>
+      <p>Happy Students</p>
+    </div>
+  </div>
+
+  <div className="shadow-xl h-full bg-white p-6 flex items-center">
+    <img className="w-20 h-20 rounded-full mb-4" src={download} alt="Old Questions" />
+    <div className="ml-5">
+      <h2 className="font-bold text-2xl">+12082</h2>
+      <p>Old Questions</p>
+    </div>
+  </div>
+
+  <div className="shadow-xl h-full bg-white p-6 flex items-center">
+    <img className="w-20 h-20 rounded-full mb-4" src={download} alt="Mock Test Papers" />
+    <div className="ml-5">
+      <h2 className="font-bold text-2xl">+143</h2>
+      <p>Mock Test Papers</p>
+    </div>
+  </div>
+
+  <div className="shadow-xl h-full bg-white p-6 flex items-center">
+    <img className="w-20 h-20 rounded-full mb-4" src={download} alt="Users Appeared" />
+    <div className="ml-5">
+      <h2 className="font-bold text-2xl">+16319</h2>
+      <p>Users Appeared</p>
+    </div>
+  </div>
+
+</div>
+ 
+ {/* ended  */}
+
+ <div>
+  <h2 className="text-center p-10 mt-10 text-orange-500 font-bold text-2xl">
+    Get Clarity About  <span className="text-[#4095ba]">Your Career </span>
+  </h2>
+</div>
+
+<div className="max-w-[1240px] gap-5  mx-auto  md:grid grid-cols-3 shadow-2xl">
+  <div className="text-2xl border border-[#4779ce64] text-center hover:text-black rounded p-3 m-4  text-[#e44c65]">Take It Test </div>
+  <div className="text-2xl  border border-[#4779ce64] text-center hover:text-black rounded  p-3 m-4 text-[#f04e56]">Take It Test </div>
+  <div className="text-2xl  border border-[#4779ce64] text-center hover:text-black rounded  p-3 m-4 text-[#e24848]">Take It Test </div>
+</div>
+    
+    
+   
 
     </>
   );
