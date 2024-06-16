@@ -365,6 +365,7 @@ function App() {
  
  {/* ended  */}
 
+{/* get Clarity about your career  */}
  <div>
   <h2 className="text-center p-10 mt-10 text-orange-500 font-bold text-2xl">
     Get Clarity About  <span className="text-[#4095ba]">Your Career </span>
@@ -377,6 +378,7 @@ function App() {
   <div className="text-2xl  border border-[#4779ce64] text-center hover:text-black rounded  p-3 m-4 text-[#e24848]">Take It Test </div>
 </div>
     
+    {/* ended  */}
     
    
 
