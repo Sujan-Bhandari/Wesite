@@ -4,6 +4,8 @@ import { CiSearch } from "react-icons/ci";
 import saral from "../src/image/saral.jpg";
 import download from "../src/image/download.jpg";
 import images from "../src/image/images.jpg";
+import education from "../src/image/education.jpg";
+
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -354,7 +356,7 @@ function App() {
   </div>
 
   <div className="shadow-xl h-full bg-white p-6 flex items-center">
-    <img className="w-20 h-20 rounded-full mb-4" src={download} alt="Users Appeared" />
+    <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
     <div className="ml-5">
       <h2 className="font-bold text-2xl">+16319</h2>
       <p>Users Appeared</p>
@@ -373,14 +375,106 @@ function App() {
 </div>
 
 <div className="max-w-[1240px] gap-5  mx-auto  md:grid grid-cols-3 shadow-2xl">
-  <div className="text-2xl border border-[#4779ce64] text-center hover:text-black rounded p-3 m-4  text-[#e44c65]">Take It Test </div>
-  <div className="text-2xl  border border-[#4779ce64] text-center hover:text-black rounded  p-3 m-4 text-[#f04e56]">Take It Test </div>
-  <div className="text-2xl  border border-[#4779ce64] text-center hover:text-black rounded  p-3 m-4 text-[#e24848]">Take It Test </div>
+  <div className="text-2xl border border-[#4779ce64] text-center hover:text-black rounded p-3 m-4  text-[#4779ce]">Take It Test </div>
+  <div className="text-2xl  border border-[#4779ce64] text-center hover:text-black rounded  p-3 m-4 text-[#4779ce]">Take It Test </div>
+  <div className="text-2xl  border border-[#4779ce64] text-center hover:text-black rounded  p-3 m-4 text-[#4779ce]">Take It Test </div>
 </div>
     
     {/* ended  */}
     
    
+
+   {/* Whats your study plan  */}
+   <div >
+  <h2 className="text-center p-10 mt-10 text-orange-500 font-bold text-2xl">
+    WHATS OUR   <span className="text-[#4095ba]">STUDENTS SAYS? </span>
+  </h2>
+</div>
+
+<div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+  <div className="border border-black p-4 hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105"> 
+    <p>I would like to give very much thanks to Saral Shiksha team for giving me such an outstanding platform for Bsc.CSIT entrance examination. The mock test conducted by Saral Shiksha helped me a lot and I was able to secure an outstanding position in the CSIT entrance examination. The mock test conducted in many colleges helped me to get rid of fear during the IOST entrance examination. Again, Thank You Saral Shikshya team.</p>
+
+    <div className="bg-white p-6 flex items-center mt-4">
+      <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
+      <div className="ml-5">
+        <h2 className="font-bold text-2xl">Pragya Sapkota  </h2>
+        <p>IOST exam 2075, Girls Topper, Amrit Science Campus </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="border border-black p-4 hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105"> 
+    <p>I would like to give very much thanks to Saral Shiksha team for giving me such an outstanding platform for Bsc.CSIT entrance examination. The mock test conducted by Saral Shiksha helped me a lot and I was able to secure an outstanding position in the CSIT entrance examination. The mock test conducted in many colleges helped me to get rid of fear during the IOST entrance examination. Again, Thank You Saral Shikshya team.</p>
+
+    <div className="bg-white p-6 flex items-center mt-4">
+      <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
+      <div className="ml-5">
+        <h2 className="font-bold text-2xl">Pragya Sapkota  </h2>
+        <p>IOST exam 2075, Girls Topper, Amrit Science Campus </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="border border-black p-4 hover:shadow-lg transition duration-300 ease-in-out transform hover:scale-105"> 
+    <p>I would like to give very much thanks to Saral Shiksha team for giving me such an outstanding platform for Bsc.CSIT entrance examination. The mock test conducted by Saral Shiksha helped me a lot and I was able to secure an outstanding position in the CSIT entrance examination. The mock test conducted in many colleges helped me to get rid of fear during the IOST entrance examination. Again, Thank You Saral Shikshya team.</p>
+
+    <div className="bg-white p-6 flex items-center mt-4">
+      <img className="w-20 h-20 rounded-full mb-4" src={download} alt="" />
+      <div className="ml-5">
+        <h2 className="font-bold text-2xl">Pragya Sapkota  </h2>
+        <p>IOST exam 2075, Girls Topper, Amrit Science Campus </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ended  */}
+
+
+{/* Start your exam preparation now  */}
+<div className="max-w-[1240px] mx-auto grid grid-cols-3 p-20 h-auto shadow-xl">
+  <div className=" col-span-1 flex items-center justify-center">
+    <img src={education} alt="Education" className="w-3/4 h-auto object-contain" />
+  </div>
+  <div className=" col-span-2 p-5">
+    <h2 className="mt-10 text-[#4095ba] font-bold text-2xl">
+      Start Your Exam Preparation Now!
+    </h2>
+    <h4 className="font-bold text-xl mt-2">
+      Practice, Analyze, and Improve.
+    </h4>
+    <div className=" mt-5  bg-[#2e2e3d] h-10 w-52 rounded-xl hover:bg-orange-100 transition-colors">
+      <p className="text-white hover:text-black font-bold text-center leading-10">
+        Get Started For Free
+      </p>
+    </div>
+  </div>
+</div>
+{/* ended  */}
+
+
+{/* footer  */}
+<footer className="bg-[#b6b6cb] py-8">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-4">
+    <div className="md:text-5xl w-[100]  text-center rounded  font-bold">infodev</div>
+    <ul className="flex flex-col md:flex-row gap-5 text-center">
+      <li><a href="#aboutus" className="hover:text-blue-500">About Us</a></li>
+      <li><a href="#terms" className="hover:text-blue-500">Terms & Conditions</a></li>
+      <li><a href="#faq" className="hover:text-blue-500">FAQ</a></li>
+      <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
+    </ul>
+    <ul className="flex gap-5 text-white  font-bold text-xl ">
+      <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">Facebook</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">Instagram</a></li>
+      <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">LinkedIn</a></li>
+      <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">Twitter</a></li>
+    </ul>
+  </div>
+</footer>
+
+
 
     </>
   );
